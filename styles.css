@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.calculator-container {
+    perspective: 1000px;
+}
+
+.calculator {
+    width: 300px;
+    background-color: #d4d9e0;
+    border: 2px solid #888;
+    border-radius: 15px;
+    padding: 15px 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 2px 5px rgba(255, 255, 255, 0.5);
+    transform: rotateX(5deg);
+    position: relative;
+}
+
+/* Calculator top section */
+.calculator-top {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.top-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.brand {
+    color: #222;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.natural-display {
+    font-size: 10px;
+    font-weight: bold;
+    color: #444;
+}
+
+.model {
+    font-size: 12px;
+    font-weight: bold;
+    color: #444;
+    padding: 5px;
+    text-align: right;
+}
+
+.plus {
+    color: #d33;
+    font-weight: bold;
+}
+
+.solar-panel {
+    width: 100px;
+    height: 20px;
+    background: linear-gradient(45deg, #1e3a50, #4e6a86);
+    border: 1px solid #555;
+    border-radius: 3px;
+}
+
+/* Display */
+.display {
+    background-color: #c8cfd7;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.display-top {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    min-height: 30px;
+}
+
+.display-indicators {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+.display-indicators span {
+    font-size: 10px;
+    color: #666;
+    opacity: 0.5;
+}
+
+.display-indicators span.active {
+    opacity: 1;
+    color: #000;
+}
+
+.math-indicator {
+    font-style: italic;
+}
+
+.display-equation {
+    font-size: 12px;
+    color: #555;
+    min-height: 14px;
+    text-align: right;
+}
+
+.display-content {
+    font-size: 20px;
+    color: #000;
+    text-align: right;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/* Keypad */
+.keypad {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.row {
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.key {
+    background-color: #eff1f4;
+    color: #333;
+    border: 1px solid #999;
+    border-radius: 5px;
+    padding: 8px 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
+}
+
+.key:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Function buttons */
+.function-row .key {
+    font-size: 11px;
+    font-weight: bold;
+    background-color: #d1d6dd;
+}
+
+.function-key {
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 36px;
+}
+
+.gold-text {
+    color: #b8860b;
+}
+
+.red-text {
+    color: #d33;
+}
+
+.alpha-text {
+    color: #d33;
+    font-size: 9px;
+    margin-top: 2px;
+}
+
+/* Special sections */
+.special-functions {
+    margin-bottom: 5px;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    padding: 5px 0;
+}
+
+.main-keypad .row:nth-child(1) {
+    margin-bottom: 5px;
+}
+
+/* Specific buttons */
+.key.shift, .key.alpha, .key.mode, .key.setup {
+    background-color: #d1d6dd;
+}
+
+.key.on {
+    background-color: #e8e8e8;
+}
+
+.key.memory {
+    background-color: #f5f6f8;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.key.operator {
+    background-color: #e8e8e8;
+    font-size: 14px;
+}
+
+.key.del, .key.ac {
+    background-color: #e8e8e8;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.key.equals {
+    background-color: #d1d6dd;
+    font-size: 14px;
+}
+
+.key.exp, .key.ans {
+    font-size: 11px;
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+    .calculator {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .key {
+        padding: 6px 3px;
+        font-size: 10px;
+        min-height: 28px;
+    }
+    
+    .function-key {
+        min-height: 32px;
+    }
+} 
