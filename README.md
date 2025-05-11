@@ -8,7 +8,7 @@ A simple calculator app built using **HTML**, **CSS**, and **JavaScript**. This 
 - Responsive design for mobile and desktop devices.
 
 ## Demo
-You can view the live version of the calculator app by visiting [Live Demo](https://<your-username>.github.io/<your-repository-name>) (replace `<your-username>` and `<your-repository-name>` with your GitHub username and repo name).
+You can view the live version of the calculator app by visiting [Live Demo](https://<ashwin3342>.github.io/<casio991esplus>) (replace `<your-username>` and `<your-repository-name>` with your GitHub username and repo name).
 
 ## Installation
 
@@ -17,4 +17,4 @@ To run this project locally on your machine, follow these steps:
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/<your-username>/<your-repository-name>.git
+   git clone https://github.com/<ashwin3342>/<casio991esplus>.git
